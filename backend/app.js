@@ -7,12 +7,11 @@ const apiRouter = require('./routes/apiRouter')
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
-
-app.get('/',async (req, res) => {
-    const level = await prisma.leaderboard.findMany()
-    console.log(level)
-    res.send("Success", level)
-})
+app.use(
+    cors({
+      origin: ["https://findit-hek.netlify.app", "http://localhost:5173"],
+    })
+);
 
 app.use('/level', apiRouter)
 
