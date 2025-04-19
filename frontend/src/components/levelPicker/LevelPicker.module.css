@@ -1,0 +1,53 @@
+.level__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid var(--off-white);
+    width: 70%;
+    max-width: 400px;
+    padding: 1.5rem 2rem;
+    gap: 10px;
+    background-color: var(--light-blue);
+    transition: 0.4s all ease, 0.8s font-size;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    font-size: 1.2rem;
+    color: var(--off-white);
+    text-decoration: none;
+  }
+  
+  .level__card img {
+    transition: 0.8s all ease;
+    width: 100%;
+    height: 100%;
+    max-height: 478px;
+    max-width: 500px;
+    border-radius: 5px;
+  }
+  
+  .level__card h2 {
+    font-family: var(--font-fredoka);
+    font-weight: 500;
+  }
+  
+  .level__card:hover {
+    border-color: var(--yellow);
+    border: 2px solid;
+    color: var(--yellow);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  @media (min-width: 1024px) {
+    .level__card {
+      padding: 2rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .level__card {
+      padding: 2.5rem;
+    }
+  }
+  
