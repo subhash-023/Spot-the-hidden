@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config()
 const cors = require('cors')
-const PORT = process.env.EXPRESS_PORT
+const PORT = process.env.PORT || 3000
 const app = express()
 const prisma = require('./config/prismaConfig')
 const apiRouter = require('./routes/apiRouter')
@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.use(
     cors({
-      origin: ["https://respectful-patience-production.up.railway.app", "http://localhost:5173"],
+      origin: ["http://localhost:5173"],
     })
 );
 
