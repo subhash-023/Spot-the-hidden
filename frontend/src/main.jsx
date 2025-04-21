@@ -14,5 +14,5 @@ createRoot(document.getElementById('root')).render(
         <Route path='/leaderboard/:id' element={ <Leaderboard/> }/>
       </Routes>
     </Router>
-  </StrictMode>,
+  </StrictMode>
 )
