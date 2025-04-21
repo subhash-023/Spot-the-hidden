@@ -1,0 +1,28 @@
+.field {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-blue);
+    width: 100%;
+    position: relative;
+    max-width: 500px;
+  }
+  
+  .name,
+  .time {
+    font-family: var(--font-fredoka);
+  }
+  
+  .position {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 800;
+    color: var(--yellow);
+  }
+  

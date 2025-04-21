@@ -18,7 +18,7 @@ const getLevels = async () => {
 
 const getLevel = async (id) => {
     try {
-        const response = await fetch(`${base_url}/level:/${id}`)
+        const response = await fetch(`${base_url}/level/${id}`)
         if (!response.ok) {
             console.error("Error fetching level data, http: ", response.status)
             return null
