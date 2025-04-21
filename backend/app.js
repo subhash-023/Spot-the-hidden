@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.use(
     cors({
-      origin: ["https://respectful-patience-production.up.railway.app/", "http://localhost:5173"],
+      origin: ["https://respectful-patience-production.up.railway.app", "http://localhost:5173"],
     })
 );
 
