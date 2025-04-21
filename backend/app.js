@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config()
 const cors = require('cors')
-const PORT = process.env.EXPRESS_PORT
+const PORT = process.env.PORT
 const app = express()
 const prisma = require('./config/prismaConfig')
 const apiRouter = require('./routes/apiRouter')
