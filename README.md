@@ -5,9 +5,7 @@ This project is a web-based photo tagging game inspired by the classic "Where's 
 
 This is a full-stack application built as part of [The Odin Project's](https://www.theodinproject.com/lessons/nodejs-where-s-waldo-a-photo-tagging-app) curriculum.
 
-Live Demo: 
-
-(Replace the placeholder above with a screenshot of your actual application)
+**Live Demo**: https://spot-the-hidden.netlify.app/
 
 ## **Features**
 

@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 app.use(
     cors({
-      origin: '*',
+      origin: ['https://spot-the-hidden.netlify.app', 'http://localhost:5173']
     })
 );
 
