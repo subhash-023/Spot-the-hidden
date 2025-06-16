@@ -26,19 +26,16 @@ This is a full-stack application built as part of [The Odin Project's](https://w
 ## **Tech Stack**
 This project was built using the following technologies:
 
-**Frontend**:
-
-React.js
+**Frontend**: React.js
 
 **Backend**:
-
 Node.js with Express.js
 
 PostgreSQL
 
 **Deployment**:
-
-Vercel / Netlify / Heroku
+Frontend: Netflify
+Backend(Server and database): Render
 
 ## **How It Works**
 
