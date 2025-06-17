@@ -1,7 +1,7 @@
 
 # Spot-the-hidden - A Photo Tagging App
 
-This project is a web-based photo tagging game inspired by the classic "Where's Waldo?" books. Users are shown a large, detailed image and must find and tag specific characters hidden within it. The application features a server-side validation system, a real-time game timer, and a leaderboard to record the fastest times.
+This project is a web-based photo tagging game inspired by the classic "Where's Waldo?" books. Users are shown a large, detailed image and must find and tag specific characters hidden within it. The application features Interactive image-tagging, a real-time game timer, and a leaderboard to record the fastest times.
 
 This is a full-stack application built as part of [The Odin Project's](https://www.theodinproject.com/lessons/nodejs-where-s-waldo-a-photo-tagging-app) curriculum.
 
@@ -10,8 +10,6 @@ This is a full-stack application built as part of [The Odin Project's](https://w
 ## **Features**
 
 **Interactive Image Tagging**: Click anywhere on the image to bring up a targeting box and a dropdown menu of characters to find.
-
-**Server-Side Validation**: Character selections are validated on the backend to see if the user's click is within the correct coordinates. This prevents client-side cheating.
 
 **Real-time Feedback**: Users receive instant feedback on whether their selection was correct or not.
 
@@ -27,6 +25,7 @@ This is a full-stack application built as part of [The Odin Project's](https://w
 This project was built using the following technologies:
 
 **Frontend**: 
+
 React.js
 
 **Backend**:
@@ -43,16 +42,12 @@ Backend(Server and database): Render
 
 ## **How It Works**
 
-The application's logic is separated between the frontend and backend to ensure a secure and responsive experience:
+1.  **Load the Level:** When you open a level, the application first fetches all the necessary data. This includes the main image for the puzzle and the coordinates of the items you need to find.
 
-**Game Start**: When the page loads, the frontend fetches the game image and starts a timer on the server, associating it with a unique session ID.
+2.  **Start the timer:** You are shown which items to look for. As soon as you hit the "Start" button, a timer starts.
 
-**User Interaction**: When a user clicks on the image, the frontend calculates the relative (x, y) coordinates of the click as a percentage of the image's total dimensions. This ensures the coordinates are consistent regardless of the user's screen size.
+3.  **Find and Select:** You click on the spot in the main image where you think an item is hidden. A small menu appears right where you clicked, letting you select which of the target items you believe you've found.
 
-**API Call**: The frontend sends the character name selected by the user and the calculated coordinates to a backend API endpoint for validation.
+4.  **Check for a Match:** The application checks if your chosen item is actually located at the coordinates you clicked. If you're right, the item is marked as "found." If not, you can try again.
 
-**Backend Validation**: The server receives the request and queries the database. It checks if the submitted coordinates fall within the pre-defined bounding box stored for that specific character.
-
-**Feedback Loop**: The server responds with whether the selection was true (correct) or false (incorrect). The frontend then displays the appropriate message to the user and, if correct, places a permanent marker on the image.
-
-**Game End**: Once all characters are found, the server stops the timer and the final time is sent to the user. They are then prompted to enter their name for the leaderboard.
+5.  **Win and Submit Score:** Once you have successfully found all the items, the timer stops. A victory screen appears showing your final time. You can then enter your name to save your score to the level's leaderboard before being taken to see the rankings.
